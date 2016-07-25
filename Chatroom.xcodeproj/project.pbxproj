@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		44131E891D45F2FE0023F6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44131E881D45F2FE0023F6C0 /* AppDelegate.swift */; };
-		44131E8B1D45F2FE0023F6C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44131E8A1D45F2FE0023F6C0 /* ViewController.swift */; };
 		44131E8E1D45F2FE0023F6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44131E8C1D45F2FE0023F6C0 /* Main.storyboard */; };
 		44131E901D45F2FE0023F6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */; };
 		44131E931D45F2FE0023F6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44131E911D45F2FE0023F6C0 /* LaunchScreen.storyboard */; };
+		44EC1CA71D45F4AA00466341 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC1CA61D45F4AA00466341 /* JoinVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44131E851D45F2FE0023F6C0 /* Chatroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44131E881D45F2FE0023F6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44131E8A1D45F2FE0023F6C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44131E8D1D45F2FE0023F6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44131E921D45F2FE0023F6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44131E941D45F2FE0023F6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44EC1CA61D45F4AA00466341 /* JoinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				44131E881D45F2FE0023F6C0 /* AppDelegate.swift */,
-				44131E8A1D45F2FE0023F6C0 /* ViewController.swift */,
+				44EC1CA61D45F4AA00466341 /* JoinVC.swift */,
 				44131E8C1D45F2FE0023F6C0 /* Main.storyboard */,
-				44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */,
-				44131E911D45F2FE0023F6C0 /* LaunchScreen.storyboard */,
-				44131E941D45F2FE0023F6C0 /* Info.plist */,
+				44EC1CA51D45F33000466341 /* Resources */,
 			);
 			path = Chatroom;
+			sourceTree = "<group>";
+		};
+		44EC1CA51D45F33000466341 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */,
+				44131E941D45F2FE0023F6C0 /* Info.plist */,
+				44131E911D45F2FE0023F6C0 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44131E8B1D45F2FE0023F6C0 /* ViewController.swift in Sources */,
 				44131E891D45F2FE0023F6C0 /* AppDelegate.swift in Sources */,
+				44EC1CA71D45F4AA00466341 /* JoinVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				44131E991D45F2FE0023F6C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
