@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-zR-6ND">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="eugene" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-zR-6ND">
                                 <rect key="frame" x="16" y="128" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tnH-Is-k6y"/>
@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chatroom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-Ep-8FS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="room" borderStyle="roundedRect" placeholder="Chatroom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-Ep-8FS">
                                 <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QwC-JF-F81"/>
@@ -64,11 +64,50 @@
                     <connections>
                         <outlet property="chatroomField" destination="eVz-Ep-8FS" id="PJN-4o-WGD"/>
                         <outlet property="usernameField" destination="y4p-zR-6ND" id="p1d-SC-Ev1"/>
+                        <segue destination="Nx5-p0-YmJ" kind="modal" identifier="chatSegue" id="ObZ-jE-xoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="368"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="h5d-b8-tDY">
+            <objects>
+                <viewController id="Nx5-p0-YmJ" customClass="ChatVC" customModule="Chatroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lh2-Kh-Zsm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ly4-v9-B7j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKF-cZ-w1v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JJ-vc-BXh">
+                                <rect key="frame" x="-4" y="0.0" width="59" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="BvW-hG-7o6"/>
+                                    <constraint firstAttribute="height" constant="28" id="qdR-yb-DSN"/>
+                                </constraints>
+                                <state key="normal" title="dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissAction:" destination="Nx5-p0-YmJ" eventType="touchUpInside" id="yHq-v0-dMU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5776789188" green="0.71560645099999998" blue="0.34591302280000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0JJ-vc-BXh" firstAttribute="top" secondItem="IKF-cZ-w1v" secondAttribute="topMargin" id="ceX-aQ-bAg"/>
+                            <constraint firstItem="0JJ-vc-BXh" firstAttribute="leading" secondItem="IKF-cZ-w1v" secondAttribute="leadingMargin" constant="-20" id="lEq-jX-F37"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8v-V6-HFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="368"/>
         </scene>
     </scenes>
 </document>
