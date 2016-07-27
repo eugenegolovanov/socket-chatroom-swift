@@ -11,6 +11,8 @@
 		44131E8E1D45F2FE0023F6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44131E8C1D45F2FE0023F6C0 /* Main.storyboard */; };
 		44131E901D45F2FE0023F6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */; };
 		44131E931D45F2FE0023F6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44131E911D45F2FE0023F6C0 /* LaunchScreen.storyboard */; };
+		442ADBF51D48692E0075CFC6 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442ADBF41D48692E0075CFC6 /* ChatCell.swift */; };
+		442ADBF71D4869CD0075CFC6 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442ADBF61D4869CD0075CFC6 /* ChatCell.xib */; };
 		44530CE71D47C3AC0044F48A /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530CD01D47C3AC0044F48A /* SocketAckEmitter.swift */; };
 		44530CE81D47C3AC0044F48A /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530CD11D47C3AC0044F48A /* SocketAckManager.swift */; };
 		44530CE91D47C3AC0044F48A /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530CD21D47C3AC0044F48A /* SocketAnyEvent.swift */; };
@@ -46,6 +48,8 @@
 		44131E8F1D45F2FE0023F6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44131E921D45F2FE0023F6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44131E941D45F2FE0023F6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		442ADBF41D48692E0075CFC6 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		442ADBF61D4869CD0075CFC6 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		44530CD01D47C3AC0044F48A /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
 		44530CD11D47C3AC0044F48A /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
 		44530CD21D47C3AC0044F48A /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		44530D021D47C4E80044F48A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				442ADBF41D48692E0075CFC6 /* ChatCell.swift */,
+				442ADBF61D4869CD0075CFC6 /* ChatCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44131E931D45F2FE0023F6C0 /* LaunchScreen.storyboard in Resources */,
+				442ADBF71D4869CD0075CFC6 /* ChatCell.xib in Resources */,
 				44131E901D45F2FE0023F6C0 /* Assets.xcassets in Resources */,
 				44131E8E1D45F2FE0023F6C0 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +290,7 @@
 				44530CF41D47C3AC0044F48A /* SocketIOClientOption.swift in Sources */,
 				44530CFF1D47C47D0044F48A /* SocketIOManager.swift in Sources */,
 				44530CEA1D47C3AC0044F48A /* SocketClientManager.swift in Sources */,
+				442ADBF51D48692E0075CFC6 /* ChatCell.swift in Sources */,
 				44530CFC1D47C3AC0044F48A /* SSLSecurity.swift in Sources */,
 				44530CF91D47C3AC0044F48A /* SocketParsable.swift in Sources */,
 			);

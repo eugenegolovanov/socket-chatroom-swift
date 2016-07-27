@@ -16,8 +16,8 @@ class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
 //    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://localhost:3000")!)
-//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
+//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
     
     
     
@@ -45,10 +45,7 @@ class SocketIOManager: NSObject {
     
     
     func connectToChatroomWithNickname(chatroom chatroom:String, nickname: String) {
-        socket.emit("joinRoom", [
-            "name": nickname,
-            "room": chatroom
-            ])
+        socket.emit("joinRoom", ["name": nickname,"room": chatroom])
     }
     
     
@@ -56,9 +53,9 @@ class SocketIOManager: NSObject {
     //----------------------------------------------------------------------------------------
     //MARK: - Messages
     
-//    func sendMessage(message: String, withNickname nickname: String) {
-//        socket.emit("chatMessage", nickname, message)
-//    }
+    func sendMessage(message message:String, name:String, timestamp:Int) {
+        socket.emit("message", ["text": message, "name": name, "timestamp": timestamp])
+    }
     
     
     func getChatMessage(completionHandler: (messageInfo: [String: AnyObject]) -> Void) {
@@ -68,15 +65,11 @@ class SocketIOManager: NSObject {
                 print("something wrong with message data")
                 return
             }
-//            print("-----------------------------------------------------")
-//            print("dataArray: \(data["name"])")
-//            print("\nsocketAck: \(socketAck)")
             var messageDictionary = [String: AnyObject]()
             messageDictionary["name"] = data["name"] as? String
             messageDictionary["text"] = data["text"] as? String
             messageDictionary["timestamp"] = data["timestamp"]
             completionHandler(messageInfo: messageDictionary)
-//            print("-----------------------------------------------------")
         }
     }
     

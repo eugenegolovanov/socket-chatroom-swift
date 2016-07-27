@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="90" id="41N-v9-fYw" customClass="ChatCell" customModule="SocketChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="41N-v9-fYw" id="fHU-Nb-oFl">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-Pk-zgm">
+                        <rect key="frame" x="8" y="8" width="304" height="42"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-Km-t74">
+                        <rect key="frame" x="0.0" y="58" width="320" height="21"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Gabriel at 18:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRE-wh-xhe">
+                                <rect key="frame" x="8" y="0.0" width="304" height="21"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zMe-kY-gzq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NRE-wh-xhe" firstAttribute="top" secondItem="6Yz-Km-t74" secondAttribute="top" id="8W6-mZ-5bS"/>
+                            <constraint firstAttribute="height" constant="21" id="ZgB-CE-afY"/>
+                            <constraint firstItem="NRE-wh-xhe" firstAttribute="leading" secondItem="6Yz-Km-t74" secondAttribute="leading" constant="8" id="fp2-OU-z2X"/>
+                            <constraint firstAttribute="trailing" secondItem="NRE-wh-xhe" secondAttribute="trailing" constant="8" id="zyc-mp-XFJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vzv-Pk-zgm" firstAttribute="leading" secondItem="fHU-Nb-oFl" secondAttribute="leadingMargin" id="4Gx-zA-LzA"/>
+                    <constraint firstItem="6Yz-Km-t74" firstAttribute="leading" secondItem="fHU-Nb-oFl" secondAttribute="leadingMargin" constant="-8" id="NYj-kt-GSi"/>
+                    <constraint firstItem="6Yz-Km-t74" firstAttribute="top" secondItem="vzv-Pk-zgm" secondAttribute="bottom" constant="8" id="TjF-44-73n"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6Yz-Km-t74" secondAttribute="trailing" constant="-8" id="WOT-oE-bWB"/>
+                    <constraint firstItem="vzv-Pk-zgm" firstAttribute="trailing" secondItem="fHU-Nb-oFl" secondAttribute="trailingMargin" id="Xfs-4p-RdA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6Yz-Km-t74" secondAttribute="bottom" constant="2" id="aLg-PX-XKa"/>
+                    <constraint firstItem="vzv-Pk-zgm" firstAttribute="top" secondItem="fHU-Nb-oFl" secondAttribute="topMargin" id="rS2-j9-KNc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="lblChatMessage" destination="vzv-Pk-zgm" id="Hds-N9-Fm9"/>
+                <outlet property="lblMessageDetails" destination="NRE-wh-xhe" id="5BY-ES-3fH"/>
+            </connections>
+            <point key="canvasLocation" x="903" y="305"/>
+        </tableViewCell>
+    </objects>
+</document>

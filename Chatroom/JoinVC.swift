@@ -48,8 +48,14 @@ class JoinVC: UIViewController {
     //---------------------------------------------------------------------------
     // MARK: - Navigation
 
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "chatSegue" {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let vc = navVC.viewControllers.first as! ChatVC
+            vc.nameLabel.text = self.usernameField.text!
+            vc.roomLabel.text = self.chatroomField.text!
+        }
+    }
 
 
 }
