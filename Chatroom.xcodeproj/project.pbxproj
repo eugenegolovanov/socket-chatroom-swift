@@ -38,6 +38,7 @@
 		44530CFD1D47C3AC0044F48A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530CE61D47C3AC0044F48A /* WebSocket.swift */; };
 		44530CFF1D47C47D0044F48A /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530CFE1D47C47D0044F48A /* SocketIOManager.swift */; };
 		44530D071D47F1CC0044F48A /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44530D061D47F1CC0044F48A /* ChatVC.swift */; };
+		44B090201D49968900C35654 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0901F1D49968900C35654 /* Message.swift */; };
 		44EC1CA71D45F4AA00466341 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC1CA61D45F4AA00466341 /* JoinVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		44530CE61D47C3AC0044F48A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		44530CFE1D47C47D0044F48A /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		44530D061D47F1CC0044F48A /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		44B0901F1D49968900C35654 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		44EC1CA61D45F4AA00466341 /* JoinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 		44530D011D47C4E20044F48A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44B0901F1D49968900C35654 /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				44530CF61D47C3AC0044F48A /* SocketIOClientStatus.swift in Sources */,
 				44530CF21D47C3AC0044F48A /* SocketExtensions.swift in Sources */,
 				44530CF01D47C3AC0044F48A /* SocketEngineWebsocket.swift in Sources */,
+				44B090201D49968900C35654 /* Message.swift in Sources */,
 				44530CFD1D47C3AC0044F48A /* WebSocket.swift in Sources */,
 				44530CF51D47C3AC0044F48A /* SocketIOClientSpec.swift in Sources */,
 				44530CE91D47C3AC0044F48A /* SocketAnyEvent.swift in Sources */,

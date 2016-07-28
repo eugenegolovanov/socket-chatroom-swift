@@ -8,11 +8,14 @@
 
 import UIKit
 
+//class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 class ChatVC: UIViewController {
-    
+
+
     //---------------------------------------------------------------------------
     // MARK: - Properties
     
+    @IBOutlet weak var tableViewChat: UITableView!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
@@ -24,7 +27,10 @@ class ChatVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChatVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
     }
     
     
@@ -35,8 +41,9 @@ class ChatVC: UIViewController {
         SocketIOManager.sharedInstance.getChatMessage { (messageInfo) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 print("----------------------MESSAGE INFO:-------------------------------")
-                print("Received Message: \(messageInfo)")
-                print("-----------------------------------------------------")
+                let message = Message(data: messageInfo)
+                print("Received Message: \(message)")
+                print("-----------------------------------------------------")                
             })
         }
     }
@@ -71,6 +78,69 @@ class ChatVC: UIViewController {
         SocketIOManager.sharedInstance.closeConnection()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    //---------------------------------------------------------------------------
+    // MARK: - End editing
+
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //---------------------------------------------------------------------------
+    // MARK: - -UITableView Delegate and Datasource Methods-
+    
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return chatMessages.count
+//    }
+//    
+//    
+//    
+//    /**
+//     When a message is sent from us (our user), the cell contents will be aligned to the right.
+//     When the sender is another user, the cell contents will be aligned to the left.
+//     */
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! ChatCell
+//        
+//        let currentChatMessage = chatMessages[indexPath.row]
+//        let senderNickname = currentChatMessage["nickname"] as! String
+//        let message = currentChatMessage["message"] as! String
+//        let messageDate = currentChatMessage["date"] as! String
+//        
+//        if senderNickname == nickname {
+//            cell.lblChatMessage.textAlignment = NSTextAlignment.Right
+//            cell.lblMessageDetails.textAlignment = NSTextAlignment.Right
+//            
+//            cell.lblChatMessage.textColor = lblNewsBanner.backgroundColor
+//        }
+//        
+//        cell.lblChatMessage.text = message
+//        cell.lblMessageDetails.text = "by \(senderNickname.uppercaseString) @ \(messageDate)"
+//        
+//        cell.lblChatMessage.textColor = UIColor.darkGrayColor()
+//        
+//        return cell
+//        
+//    }
+
+    
+
     
     
     

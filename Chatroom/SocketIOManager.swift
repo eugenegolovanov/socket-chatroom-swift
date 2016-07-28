@@ -16,8 +16,8 @@ class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
 //    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://localhost:3000")!)
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
-//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
+//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
     
     
     

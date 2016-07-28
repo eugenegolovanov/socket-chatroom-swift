@@ -119,11 +119,19 @@
                                     <constraint firstAttribute="height" constant="52" id="yWR-nS-ICa"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-js-6Dw">
+                                <rect key="frame" x="-4" y="72" width="328" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.58431372550000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K3h-pa-bGK" secondAttribute="trailing" constant="-20" id="2N1-x6-hrl"/>
+                            <constraint firstItem="Jbf-js-6Dw" firstAttribute="top" secondItem="Lh2-Kh-Zsm" secondAttribute="bottom" constant="8" id="6Nr-Dm-WNc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jbf-js-6Dw" secondAttribute="trailing" constant="-20" id="MyE-9b-Bxp"/>
                             <constraint firstItem="ly4-v9-B7j" firstAttribute="top" secondItem="K3h-pa-bGK" secondAttribute="bottom" id="TL4-oC-K3h"/>
+                            <constraint firstItem="Jbf-js-6Dw" firstAttribute="leading" secondItem="IKF-cZ-w1v" secondAttribute="leadingMargin" constant="-20" id="iau-Yf-LEJ"/>
+                            <constraint firstItem="K3h-pa-bGK" firstAttribute="top" secondItem="Jbf-js-6Dw" secondAttribute="bottom" constant="8" id="r8B-zM-Cs7"/>
                             <constraint firstItem="K3h-pa-bGK" firstAttribute="leading" secondItem="IKF-cZ-w1v" secondAttribute="leadingMargin" constant="-20" id="xtn-hA-mXa"/>
                         </constraints>
                     </view>
@@ -202,6 +210,7 @@
                         <outlet property="messageTextField" destination="1uk-9k-7VT" id="ISX-bG-Lhe"/>
                         <outlet property="nameLabel" destination="ZKy-6S-kZ5" id="7S4-fE-5YV"/>
                         <outlet property="roomLabel" destination="iYE-SS-Bcn" id="ZN6-Pf-SWi"/>
+                        <outlet property="tableViewChat" destination="Jbf-js-6Dw" id="Ka8-st-aJE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8v-V6-HFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
