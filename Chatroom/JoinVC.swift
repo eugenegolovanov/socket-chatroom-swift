@@ -37,6 +37,8 @@ class JoinVC: UIViewController {
 
     
     @IBAction func joinChatAction(sender: UIButton) {
+        SocketIOManager.sharedInstance.establishConnection()
+
         SocketIOManager.sharedInstance.connectToChatroomWithNickname(chatroom: self.chatroomField.text!, nickname: self.usernameField.text!)
         
         performSegueWithIdentifier("chatSegue", sender: self)

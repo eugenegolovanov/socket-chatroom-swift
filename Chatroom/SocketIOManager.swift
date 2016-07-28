@@ -16,8 +16,8 @@ class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
 //    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://localhost:3000")!)
-//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.0.2:3000")!)//HOME
+//    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.10.234:3000")!)//WORK
     
     
     
@@ -29,7 +29,11 @@ class SocketIOManager: NSObject {
         super.init()
     }
     
-    
+//    func listenSocket() {
+//        socket.on("connect") {data, ack in
+//            print("socket connected")
+//        }
+//    }
     
     //----------------------------------------------------------------------------------------
     //MARK: - Connection
@@ -43,6 +47,10 @@ class SocketIOManager: NSObject {
         socket.disconnect()
     }
     
+//    func recconnectConnection() {
+//        socket.reconnect()
+//    }
+
     
     func connectToChatroomWithNickname(chatroom chatroom:String, nickname: String) {
         socket.emit("joinRoom", ["name": nickname,"room": chatroom])
