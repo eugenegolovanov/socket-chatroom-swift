@@ -42,6 +42,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        SocketIOManager.sharedInstance.connectToChatroomWithNickname(chatroom: self.roomLabel.text!, nickname: self.nameLabel.text!)
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -109,7 +113,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBAction func dismissAction(sender: UIButton) {
-//        SocketIOManager.sharedInstance.closeConnection()
+        SocketIOManager.sharedInstance.closeConnection()
 
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -169,29 +173,17 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    
-    /**
-     When a message is sent from us (our user), the cell contents will be aligned to the right.
-     When the sender is another user, the cell contents will be aligned to the left.
-     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! ChatCell
         let message = self.messagesArray[indexPath.row]
         
-        
-        
         if message.name == self.nameLabel.text {
             cell.lblChatMessage.textAlignment = NSTextAlignment.Right
             cell.lblMessageDetails.textAlignment = NSTextAlignment.Right
-            
-//            cell.lblChatMessage.textColor = lblNewsBanner.backgroundColor
         }
-        
-        
         cell.lblChatMessage.text = message.text
         cell.lblMessageDetails.text = "by \(message.name.uppercaseString) @ \(message.timeString)"
-        
         cell.lblChatMessage.textColor = UIColor.darkGrayColor()
         
         return cell
